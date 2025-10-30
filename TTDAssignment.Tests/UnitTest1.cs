@@ -15,5 +15,11 @@ public class UnitTest1
       Assert.False(romanNumeral.ValidateInput());
       Assert.IsNotType<int>(romanNumeral.ValidateInput());
     }
-
+    
+    [Fact]
+    public void Test_Input_Is_Not_Negative_Value()
+    {
+      var romanNumeral = new RomanNumeral("-1");
+      Assert.False(romanNumeral.ValidateInput());
+    }
 }
