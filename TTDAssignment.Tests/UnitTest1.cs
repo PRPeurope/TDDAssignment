@@ -22,4 +22,11 @@ public class UnitTest1
       var romanNumeral = new RomanNumeral("-1");
       Assert.False(romanNumeral.ValidateInput());
     }
+
+    [Fact]
+    public void Test_Input_Is_Not_Greater_Then_3000()
+    {
+      var romanNumeral = new RomanNumeral("3001");
+      Assert.False(romanNumeral.ValidateInput());
+    }
 }
