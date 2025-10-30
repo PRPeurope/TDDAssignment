@@ -36,4 +36,11 @@ public class UnitTest1
       var romanNumeral = new RomanNumeral("0");
       Assert.False(romanNumeral.ValidateInput());
     }
+
+    [Fact]
+    public void Test_Convert_Value_1()
+    {
+      var romanNumeral = new RomanNumeral("1");
+      Assert.Equal("I",romanNumeral.ConvertToRoman());
+    }
 }
