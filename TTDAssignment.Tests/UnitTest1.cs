@@ -29,4 +29,11 @@ public class UnitTest1
       var romanNumeral = new RomanNumeral("3001");
       Assert.False(romanNumeral.ValidateInput());
     }
+
+    [Fact]
+    public void Test_Input_Is_Not_Zero()
+    {
+      var romanNumeral = new RomanNumeral("0");
+      Assert.False(romanNumeral.ValidateInput());
+    }
 }
