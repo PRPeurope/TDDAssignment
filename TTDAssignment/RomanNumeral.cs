@@ -8,6 +8,6 @@ public class RomanNumeral
   }
   public bool ValidateInput()
   {
-    return false;
+    return int.TryParse(input, out int value);
   }
 }
