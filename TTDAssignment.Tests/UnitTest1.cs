@@ -134,4 +134,11 @@ public class UnitTest1
       var romanNumeral = new RomanNumeral("300");
       Assert.Equal("CCC",romanNumeral.ConvertToRoman());   
     }
+
+    [Fact]
+    public void Test_Convert_Value_500()
+    {  
+      var romanNumeral = new RomanNumeral("500");
+      Assert.Equal("D",romanNumeral.ConvertToRoman());   
+    }
 }
