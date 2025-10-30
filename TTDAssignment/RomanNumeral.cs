@@ -26,6 +26,11 @@ public class RomanNumeral
     int Xs = (value % 50) / 10;
     int Xrest = value % 10;
     int Is = value % 5;
+    if(value == 1000)
+    {
+      output = "M";
+      return output;
+    }
     if(Ds == 1)
     {
       output += "D";
