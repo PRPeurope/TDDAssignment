@@ -20,7 +20,8 @@ public class RomanNumeral
   {
     ValidateInput();
     string output = "";
-    int Ls = value / 50;
+    int Cs = value / 100;
+    int Crest = value % 100;
     int Xs = (value % 50) / 10;
     int Xrest = value % 10;
     int Is = value % 5;
@@ -30,7 +31,11 @@ public class RomanNumeral
       output = "C";
       return output;
     }
-    if(Ls >= 1)
+    if(Crest+10 == 100)
+    {
+      output += "C";
+    }
+    else if(Crest+10 > 40)
     {
       output += "L";
     }
@@ -43,7 +48,6 @@ public class RomanNumeral
     }
     else
     {
-      output += "L";
       output = output.Insert(output.Length-1,"X");
     }
     if(Xrest+1 == 10)
