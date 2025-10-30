@@ -1,6 +1,7 @@
 public class RomanNumeral
 {
   private string input;
+  private int value;
 
   public RomanNumeral(string input)
   {
@@ -8,7 +9,7 @@ public class RomanNumeral
   }
   public bool ValidateInput()
   {
-    bool isInt = int.TryParse(input, out int value);
+    bool isInt = int.TryParse(input, out value);
     bool isPositive = (value >= 0);
     bool doesNotExceedAmmount = (value <= 3000);
     bool isNotZero = (value != 0);
@@ -17,6 +18,7 @@ public class RomanNumeral
   
   public string ConvertToRoman()
   {
-    return "I";
+    ValidateInput();
+    return (value == 5 ? "V" : "I");
   }
 }
