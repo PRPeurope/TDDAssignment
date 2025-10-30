@@ -38,6 +38,9 @@ public class RomanNumeral
       output += "V";
       output = output.Insert(output.Length-1,"I");
     }
+
+    if(value == 10){output = "X";}
+
     return output;
   }
 }
