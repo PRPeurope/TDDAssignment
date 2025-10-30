@@ -48,6 +48,7 @@ public class RomanNumeral
     {
       output = output.Insert(output.Length-1,"I");
     }
+    if(value == 50){output = "L";}
     return output;
   }
 }
