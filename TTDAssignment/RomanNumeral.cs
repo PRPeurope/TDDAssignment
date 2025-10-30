@@ -19,6 +19,17 @@ public class RomanNumeral
   public string ConvertToRoman()
   {
     ValidateInput();
-    return (value == 5 ? "V" : "I");
+    string output = "";
+    int Vs = value / 5;
+    int Is = (value % 5);
+    for(int i = 0; i < Vs; i++)
+    {
+      output += "V";
+    }
+    for(int i = 0; i < Is; i++)
+    {
+      output += "I";
+    }    
+    return output;
   }
 }
