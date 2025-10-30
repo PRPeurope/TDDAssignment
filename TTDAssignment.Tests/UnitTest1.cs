@@ -80,6 +80,13 @@ public class UnitTest1
     }
 
     [Fact]
+    public void Test_Convert_Value_30()
+    {
+      var romanNumeral = new RomanNumeral("30");
+      Assert.Equal("XXX",romanNumeral.ConvertToRoman());
+    }
+
+    [Fact]
     public void Test_Convert_Value_50()
     {  
       var romanNumeral = new RomanNumeral("50");
