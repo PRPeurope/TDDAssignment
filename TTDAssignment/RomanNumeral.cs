@@ -20,27 +20,34 @@ public class RomanNumeral
   {
     ValidateInput();
     string output = "";
-    int Vs = value / 5;
-    int Is = (value % 5);
-    for(int i = 0; i < Vs; i++)
+
+    int Xs = value / 10;
+    int Xrest = value % 10;
+    int Is = value % 5;
+
+    for(int i = 0; i < Xs; i++)
+    {
+      output += "X";
+    }
+    if(Xrest+1 == 10)
+    {
+      output += "X";
+    }
+    else if(Xrest+1 > 4)
     {
       output += "V";
     }
-    if(Is<=3)
+    if(Is <= 3)
     {
-      for(int i = 0; i < Is; i++)
+      for(int i = 0;i < Is; i++)
       {
         output += "I";
       }
     }
     else
     {
-      output += "V";
       output = output.Insert(output.Length-1,"I");
     }
-
-    if(value == 10){output = "X";}
-
     return output;
   }
 }
