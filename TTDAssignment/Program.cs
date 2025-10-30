@@ -1,4 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-var obj = new RomanNumeral(Console.ReadLine());
-Console.WriteLine(obj.ConvertToRoman());
+for(int i = 1; i <= 3000; i++)
+{
+    var romanNumeral = new RomanNumeral(i.ToString());
+    Console.WriteLine(romanNumeral.ConvertToRoman());
+}
+
