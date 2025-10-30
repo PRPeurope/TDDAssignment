@@ -25,7 +25,7 @@ public class RomanNumeral
     int Xs = (value % 50) / 10;
     int Xrest = value % 10;
     int Is = value % 5;
-    if(Cs == 1)
+    for(int i = 0; i < Cs; i++)
     {
       output += "C";
     }
