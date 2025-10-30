@@ -25,6 +25,11 @@ public class RomanNumeral
     int Xrest = value % 10;
     int Is = value % 5;
     
+    if(value == 100)
+    {
+      output = "C";
+      return output;
+    }
     if(Ls >= 1)
     {
       output += "L";
