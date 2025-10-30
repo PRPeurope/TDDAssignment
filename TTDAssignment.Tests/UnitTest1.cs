@@ -57,4 +57,11 @@ public class UnitTest1
       var romanNumeral = new RomanNumeral("3");
       Assert.Equal("III",romanNumeral.ConvertToRoman());
     }
+    
+    [Fact]
+    public void Test_Convert_Value_4()
+    {
+      var romanNumeral = new RomanNumeral("4");
+      Assert.Equal("IV",romanNumeral.ConvertToRoman());
+    }
 }
