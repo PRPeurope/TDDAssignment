@@ -14,4 +14,9 @@ public class RomanNumeral
     bool isNotZero = (value != 0);
     return isInt && isPositive && doesNotExceedAmmount && isNotZero;
   }
+  
+  public string ConvertToRoman()
+  {
+    return "I";
+  }
 }
