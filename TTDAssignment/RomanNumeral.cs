@@ -26,10 +26,18 @@ public class RomanNumeral
     {
       output += "V";
     }
-    for(int i = 0; i < Is; i++)
+    if(Is<=3)
     {
-      output += "I";
-    }    
+      for(int i = 0; i < Is; i++)
+      {
+        output += "I";
+      }
+    }
+    else
+    {
+      output += "V";
+      output = output.Insert(output.Length-1,"I");
+    }
     return output;
   }
 }
