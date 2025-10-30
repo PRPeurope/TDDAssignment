@@ -10,6 +10,7 @@ public class RomanNumeral
   {
     bool isInt = int.TryParse(input, out int value);
     bool isPositive = (value >= 0);
-    return isInt && isPositive;
+    bool doesNotExceedAmmount = (value <= 3000);
+    return isInt && isPositive && doesNotExceedAmmount;
   }
 }
