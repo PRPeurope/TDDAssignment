@@ -20,14 +20,26 @@ public class RomanNumeral
   {
     ValidateInput();
     string output = "";
-
-    int Xs = value / 10;
+    int Ls = value / 50;
+    int Xs = (value % 50) / 10;
     int Xrest = value % 10;
     int Is = value % 5;
-
-    for(int i = 0; i < Xs; i++)
+    
+    if(Ls >= 1)
     {
-      output += "X";
+      output += "L";
+    }
+    if(Xs <= 3)
+    {
+      for(int i = 0; i < Xs; i++)
+      {
+       output += "X";
+      }
+    }
+    else
+    {
+      output += "L";
+      output = output.Insert(output.Length-1,"X");
     }
     if(Xrest+1 == 10)
     {
@@ -48,7 +60,6 @@ public class RomanNumeral
     {
       output = output.Insert(output.Length-1,"I");
     }
-    if(value == 50){output = "L";}
     return output;
   }
 }
