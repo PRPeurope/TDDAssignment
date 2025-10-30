@@ -25,13 +25,11 @@ public class RomanNumeral
     int Xs = (value % 50) / 10;
     int Xrest = value % 10;
     int Is = value % 5;
-    
-    if(value == 100)
+    if(Cs == 1)
     {
-      output = "C";
-      return output;
+      output += "C";
     }
-    if(Crest+10 == 100)
+    if(Crest+10 >= 100)
     {
       output += "C";
     }
